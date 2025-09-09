@@ -1,0 +1,53 @@
+@use './variables' as v;
+@use './mixins' as *;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@100..900&family=Roboto:wdth,wght@75..100,300&display=swap');
+
+body {
+  font-family: v.$font-main;
+  background-color: v.$dark-bg;
+  color: v.$color-text;
+  font-size: 16px;
+}
+
+a {
+  color: v.$color-text;
+  transition: color 0.2s ease-in;
+
+  &:hover {
+    color: v.$accent;
+  }
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  &--sm {
+    max-width: 840px;
+  }
+}
+
+.text-right {
+  text-align: right;
+}
+
+.link-bold {
+  color: v.$accent;
+  font-weight: 700;
+}
+
+.no-scroll {
+  overflow-y: hidden;
+}
+
+.title-2 {
+  font-size: 36px;
+  font-family: v.$font-accent;
+  color: v.$accent;
+  font-weight: 700;
+
+  @include mediaTablet {
+    font-size: 28px;
+  }
+}

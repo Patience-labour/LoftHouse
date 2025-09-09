@@ -1,0 +1,27 @@
+@use './../../Style/mixins' as *;
+
+
+.section-map {
+  padding: 90px 0;
+  position: relative;
+
+  &::after {
+    content: "VI";
+
+    right: calc(50% + 555px);
+    transform: translate(50%, 0%);
+
+    @include decorNumber();
+  }
+}
+
+.section-map__title {
+  margin-bottom: 88px;
+}
+
+.section-map__map {
+  width: 1110px;
+  height: 358px;
+  background-image: url('./../../Img/Bg/Map.png');
+  background-repeat: no-repeat;
+}
